@@ -14,9 +14,13 @@ You can find the source code for Jekyll at
 {% include icon-github.html username="jekyll" %} /
 [jekyll](https://github.com/jekyll/jekyll) -->
 
-We referenced these sites in our project: 
-<ul>
-    <li>
-      <a href="#">some site</a>
-    </li>
-</ul>
+We referenced or used data from these sites in our project: 
+<dl>
+    <dt>Data</dt>
+        <dd><a href="https://dev.twitter.com/rest/public">Twitter rest API</a></dd>
+        <dd><a href="http://www.imdb.com/interfaces">IMDB datasets</a></dd>
+        <dd><a href="http://www.omdbapi.com/">Omdapi: A rest API for IMDB</a></dd>
+    <dt>Analysis</dt>
+        <dd><a href="https://textblob.readthedocs.org/en/dev/">TextBlob: a library for 
+            processing textual data</a></dd>
+</dl>
