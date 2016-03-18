@@ -1,4 +1,4 @@
 # MachineLearningCSULA.github.io
 Site for ML
 
-Go here: MachineLearningCSULA.github.io
+Go here: [Presentation](MachineLearningCSULA.github.io)
