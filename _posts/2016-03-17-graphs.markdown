@@ -68,8 +68,8 @@ categories: jekyll update
 
 <h1>Strong Conclusions</h1>
 <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>We can predict with about 70% accuracy the success of new film</li>
+    <li>We need access to larger date sensitive data from Twitter to make this prediction more accurate</li>
+    <li>Something about graphs</li>
 </ul>
    
