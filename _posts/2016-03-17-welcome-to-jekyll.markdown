@@ -85,4 +85,3 @@ The code for extraction is available here
  positive.  This score was then averaged and scaled and added to 
  a column in our matrix of features. 
 {% endhighlight %}
-<h1>Hello World</h1>
