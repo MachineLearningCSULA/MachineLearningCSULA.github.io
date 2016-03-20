@@ -77,18 +77,37 @@ The code for extraction is available here
  To make the analysis more robust we decided that a column should be added 
  for each film that would use sentiment analysis to infer if social media
  had any impact on a films success.  Our list of films was feed through a 
- loop to make multiple rest calls to twitter's rest api.  The tweets were 
- feed through a method in textblob that returned sentiment analysis based
- on sophisticated implementation of Naive Bayes which returned a score 
- between -1 and 1.  If the score was less then one we could assume 
- that the movie negative sentiments on twitter and greater then
- positive.  This score was then averaged and scaled and added to 
- a column in our matrix of features. 
+ loop to make multiple rest calls to twitter's rest api. Due to limitations
+ in twitter data access, 100 tweets per each movie were analyzed.
 {% endhighlight %}
 <h2>Positive vs Negative Sentiment</h2>
 <img src="/assets/pos_neg.png"/>
 <br>
-<h2>Example Data: Straight Outta Compton (2015)</h2>
-<img src="/assets/straightouttacompton.jpg" />
-<br><br>
+<h3>Example Data: Straight Outta Compton (2015)</h3>
+<hr>
 <img src="/assets/sentimentchart.jpg" />
+{% highlight ruby %}
+ The tweets were feed through a method in textblob that returned 
+ sentiment analysis based on sophisticated implementation of Naive 
+ Bayes which returned a score between -1 and 1. 
+ This score was then averaged and scaled and added to a column 
+ in our matrix of features. 
+{% endhighlight %}
+<br><br>
+<img src="/assets/sentimentchart2.jpg" />
+{% highlight ruby %}
+ Since social media tweets are unstructured sentences that contain
+ special characters, mispelled words and slangs, sorting out meaningful
+ sentences were a challenge. Also, in order to give fair scoring, only
+ unique tweets per each movie were counted, and sentences with neutral
+ sentiment (usually advertisement or links) were not counted towards 
+ calculating an average.
+{% endhighlight %}
+<br><br>
+<img src="/assets/straight_result.jpg" />
+{% highlight ruby %}
+ The movie Straight Outta Compton receives average sentiment score of +30.
+{% endhighlight %}
+<br><br>
+
+
