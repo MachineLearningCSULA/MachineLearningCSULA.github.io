@@ -17,10 +17,11 @@ categories: jekyll update
   <div class="well">
   <h2>Naive Bayes</h2>
   <img src="/assets/nb_rms_vs_train.png" />
-  <!-- <caption>Blah Blah</caption> -->
+  <!-- <caption>Learning Curve</caption> -->
   <h2>Random Forest</h2>
   <img src="/assets/rf_rms_vs_train.png" />
-  <!-- add notes for TRAINING <p></p>-->
+  <!-- add notes for TRAINING <p>Training Curve: Artificially Restrict Training size, As training set grows, error grows.</p>
+  <p>Cross Validation: Stand in for test data, check to see if trained data is generalizable to test set.  So, with increased training set size, cross validation error should decrease.</p>-->
   </div>
 </div>
 <div class="collapse" id="collapseExample2">
@@ -33,14 +34,19 @@ categories: jekyll update
       <img src="/assets/svm_confus_matrix.png" />
       <!-- <h2>Confusion Matrix: Random Forest </h2> -->
       <img src="/assets/rf_confus_matrix.png" />
-      <!-- add notes for Confusion graphs <p></p>-->
+      <p>Confusion Matrix compares actual class with predicted class.  In our study true negative is upper left, true positive is lower right.  False negative is lower left and false positive is upper right.  This shows that our classifiers often predict movies to be unsuccessful.</p>
   </div>
 </div>
 <div class="collapse" id="collapseExample3">
   <div class="well">
       <h2>Receiving Operating Characteristic</h2>
       <img src="/assets/roc_samplev2.png" />
-      <!-- add notes for ROC graphs <p></p>-->
+      <p>ROC Curve, common way to visual performance of binary classifier, in our study successful or not successful movies.</p>
+      <p>True Positive: When actual classification is positive how often does classifier predict positive?</p>
+      <p>False Positive: When classification actual classification is negative how often does classify incorrectly predict positive.</p>
+      <p>Movement along the ROC curve will give the True Positive vs False Positive rates of a given classification threshold for the classifier.</p>
+      <p>Closer to diagonal line means closer to random guessing</p>
+      <p>AUC: Area Under the Curve.  Higher AUC is better, 1 is a perfect classifier, 0.5 is random guessing.  For this study SVM was same as random guessing.</p>
   </div>
 </div>
 <!-- <h2>Naive Bayes</h2>
