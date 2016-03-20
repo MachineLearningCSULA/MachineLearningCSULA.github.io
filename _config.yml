@@ -11,7 +11,7 @@ email:
 description: > # this means to ignore newlines until "baseurl:"
     A project that applys machine learning algorithms on 
     data collected from imdb and twitter.  Can we train our data sets to 
-    accurately predict the success of a film will gross from a matrix of 
+    accurately predict the success of a film based on its gross from a matrix of 
     non-monetary features?  Does social media have an impact on on this 
     as well?
 baseurl: "" # the subpath of your site, e.g. /blog

@@ -3,10 +3,13 @@ layout: post
 title:  "Data Anaylsis"
 categories: jekyll update
 ---
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
+<style>
+.wrapper{
+    margin-left = 20px;
+}
+</style>
 <style type="text/css">
     /*!
 *
@@ -145,23 +148,24 @@ div#notebook {
 <link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
-<!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-    <!-- MathJax configuration -->
-    
-
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Predicting-the-Success-of-A-Film">Predicting the Success of A Film<a class="anchor-link" href="#Predicting-the-Success-of-A-Film">&#182;</a></h1>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
-<span class="n">css</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;./style/style-table.css&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span> <span class="o">+</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;./style/style-notebook.css&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">HTML</span><span class="p">(</span><span class="s">&#39;&lt;style&gt;{}&lt;/style&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">css</span><span class="p">))</span>
-<span class="kn">import</span> <span class="nn">re</span>
+<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -179,22 +183,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Predicting-the-Success-of-a-Film">Predicting the Success of a Film<a class="anchor-link" href="#Predicting-the-Success-of-a-Film">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Convert-to-DF-and-Convert-Strings-to-Numerical-Values">Convert to DF and Convert Strings to Numerical Values<a class="anchor-link" href="#Convert-to-DF-and-Convert-Strings-to-Numerical-Values">&#182;</a></h1>
+<h2 id="Convert-to-DF-and-Convert-Strings-to-Numerical-Values">Convert to DF and Convert Strings to Numerical Values<a class="anchor-link" href="#Convert-to-DF-and-Convert-Strings-to-Numerical-Values">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;released_month&#39;</span><span class="p">]</span>
@@ -236,13 +231,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Replace-Null-Values-with-the-Median">Replace Null Values with the Median<a class="anchor-link" href="#Replace-Null-Values-with-the-Median">&#182;</a></h1>
+<h2 id="Replace-Null-Values-with-the-Median">Replace Null Values with the Median<a class="anchor-link" href="#Replace-Null-Values-with-the-Median">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">median</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;metascore&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()][</span><span class="s">&#39;metascore&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -270,13 +265,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Calculate-Profit-Ratio-to-Label-Success-of-Film">Calculate Profit Ratio to Label Success of Film<a class="anchor-link" href="#Calculate-Profit-Ratio-to-Label-Success-of-Film">&#182;</a></h1>
+<h2 id="Caculate-Profit-Ratio-to-Label-Success-of-Film">Caculate Profit Ratio to Label Success of Film<a class="anchor-link" href="#Caculate-Profit-Ratio-to-Label-Success-of-Film">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;profit_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;gross&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;budget&#39;</span><span class="p">]</span>
@@ -288,18 +283,9 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Define-Success-of-Film-and-Apply-as-Label-Column">Define Success of Film and Apply as Label Column<a class="anchor-link" href="#Define-Success-of-Film-and-Apply-as-Label-Column">&#182;</a></h1>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># define successful movie as earning net profit = three times its budget</span>
@@ -322,7 +308,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[68]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -348,80 +334,80 @@ div#notebook {
   <tbody>
     <tr>
       <th>0</th>
-      <td>11.0</td>
+      <td>11</td>
       <td>3</td>
       <td>7</td>
       <td>5</td>
       <td>262</td>
       <td>176</td>
       <td>63</td>
-      <td>46.0</td>
-      <td>41.0</td>
-      <td>209678.0</td>
+      <td>46</td>
+      <td>41</td>
+      <td>209678</td>
       <td>40000000</td>
       <td>4.154181</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>33.0</td>
+      <td>33</td>
       <td>9</td>
       <td>1</td>
       <td>4</td>
       <td>53</td>
       <td>160</td>
       <td>81</td>
-      <td>74.0</td>
-      <td>86.0</td>
-      <td>845024.0</td>
+      <td>74</td>
+      <td>86</td>
+      <td>845024</td>
       <td>165000000</td>
       <td>1.139515</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>8.0</td>
+      <td>8</td>
       <td>4</td>
       <td>0</td>
       <td>5</td>
       <td>193</td>
       <td>222</td>
       <td>54</td>
-      <td>51.0</td>
-      <td>54.0</td>
-      <td>35637.0</td>
+      <td>51</td>
+      <td>54</td>
+      <td>35637</td>
       <td>70000000</td>
       <td>0.101388</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0.0</td>
+      <td>0</td>
       <td>9</td>
       <td>3</td>
       <td>5</td>
       <td>149</td>
       <td>155</td>
       <td>89</td>
-      <td>67.0</td>
-      <td>66.0</td>
-      <td>7698.0</td>
+      <td>67</td>
+      <td>66</td>
+      <td>7698</td>
       <td>5000000</td>
       <td>0.625788</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0.0</td>
+      <td>0</td>
       <td>1</td>
       <td>5</td>
       <td>5</td>
       <td>145</td>
       <td>243</td>
       <td>59</td>
-      <td>51.0</td>
-      <td>61.0</td>
-      <td>6968.0</td>
+      <td>51</td>
+      <td>61</td>
+      <td>6968</td>
       <td>1000000</td>
       <td>0.023400</td>
       <td>0</td>
@@ -442,22 +428,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Sorting-out-data-for-2014-2016-from-Current-Films">Sorting out data for 2014-2016 from Current Films<a class="anchor-link" href="#Sorting-out-data-for-2014-2016-from-Current-Films">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-
+<h2 id="Sorting-out-data-for-2014-2016-from-Current-Films">Sorting out data for 2014-2016 from Current Films<a class="anchor-link" href="#Sorting-out-data-for-2014-2016-from-Current-Films">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># data</span>
@@ -477,13 +454,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Create-Our-Test-Sets">Create Our Test Sets<a class="anchor-link" href="#Create-Our-Test-Sets">&#182;</a></h1>
+<h2 id="Create-Our-Test-Sets">Create Our Test Sets<a class="anchor-link" href="#Create-Our-Test-Sets">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -501,7 +478,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Apply-Different-Classification-Anaylsis-Algorithm-to-Our-Data-Set">Apply Different Classification Anaylsis Algorithm to Our Data Set<a class="anchor-link" href="#Apply-Different-Classification-Anaylsis-Algorithm-to-Our-Data-Set">&#182;</a></h1>
+<h2 id="Apply-Different-Classification-Anaylsis-Algorithms-to-Test-Sets">Apply Different Classification Anaylsis Algorithms to Test Sets<a class="anchor-link" href="#Apply-Different-Classification-Anaylsis-Algorithms-to-Test-Sets">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -516,10 +493,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 <span class="n">clf_NB</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 <span class="n">nb_dec</span> <span class="o">=</span> <span class="n">clf_NB</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="n">nb_score</span> <span class="o">=</span> <span class="n">clf_NB</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_test</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">]</span>
@@ -528,6 +506,8 @@ div#notebook {
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
 <span class="n">accuracy_NB</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_NB</span><span class="p">)</span>
 <span class="n">accuracy_NB</span>
+
+<span class="k">print</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">output_NB</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -538,13 +518,17 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             precision    recall  f1-score   support
 
+        0.0       0.80      1.00      0.89        86
+        1.0       0.00      0.00      0.00        22
 
-<div class="output_text output_subarea output_execute_result">
-<pre>0.79629629629629628</pre>
+avg / total       0.63      0.80      0.71       108
+
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -562,7 +546,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
@@ -573,10 +557,7 @@ div#notebook {
 <span class="n">accuracy_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_svm</span><span class="p">)</span>
 <span class="n">accuracy_svm</span>
 
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_svm</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span><span class="n">conf_prefix</span><span class="o">=</span><span class="s">&quot;svm_&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;SVM Confusion Matrix&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">output_svm</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -588,18 +569,15 @@ div#notebook {
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-17-56f3382f0cca&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">      7</span> accuracy_svm<span class="ansiyellow"></span>
-<span class="ansigreen">      8</span> <span class="ansiyellow"></span>
-<span class="ansigreen">----&gt; 9</span><span class="ansiyellow"> </span>cm <span class="ansiyellow">=</span> confusion_matrix<span class="ansiyellow">(</span>y_test<span class="ansiyellow">,</span> output_svm<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     10</span> plt<span class="ansiyellow">.</span>figure<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     11</span> plot_confusion_matrix<span class="ansiyellow">(</span>cm<span class="ansiyellow">,</span>conf_prefix<span class="ansiyellow">=</span><span class="ansiblue">&quot;svm_&quot;</span><span class="ansiyellow">,</span>title<span class="ansiyellow">=</span><span class="ansiblue">&quot;SVM Confusion Matrix&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             precision    recall  f1-score   support
 
-<span class="ansired">NameError</span>: name &apos;confusion_matrix&apos; is not defined</pre>
+        0.0       0.80      1.00      0.89        86
+        1.0       0.00      0.00      0.00        22
+
+avg / total       0.63      0.80      0.71       108
+
+</pre>
 </div>
 </div>
 
@@ -618,7 +596,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
@@ -630,11 +608,7 @@ div#notebook {
 <span class="n">accuracy_lr</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_lr</span><span class="p">)</span>
 <span class="n">accuracy_lr</span>
 
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_lr</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span><span class="n">conf_prefix</span><span class="o">=</span><span class="s">&quot;lg_&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Logistic Regression Confusion Matrix&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">bias_var</span><span class="p">(</span><span class="n">clf_lr</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Logistic Regression &quot;</span><span class="p">,</span><span class="n">savestr</span><span class="o">=</span><span class="s">&quot;lr_&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">output_lr</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -646,18 +620,15 @@ div#notebook {
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansired">---------------------------------------------------------------------------</span>
-<span class="ansired">NameError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-18-ebf26e0cdd6b&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">      8</span> accuracy_lr<span class="ansiyellow"></span>
-<span class="ansigreen">      9</span> <span class="ansiyellow"></span>
-<span class="ansigreen">---&gt; 10</span><span class="ansiyellow"> </span>cm <span class="ansiyellow">=</span> confusion_matrix<span class="ansiyellow">(</span>y_test<span class="ansiyellow">,</span> output_lr<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     11</span> plt<span class="ansiyellow">.</span>figure<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">     12</span> plot_confusion_matrix<span class="ansiyellow">(</span>cm<span class="ansiyellow">,</span>conf_prefix<span class="ansiyellow">=</span><span class="ansiblue">&quot;lg_&quot;</span><span class="ansiyellow">,</span>title<span class="ansiyellow">=</span><span class="ansiblue">&quot;Logistic Regression Confusion Matrix&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>             precision    recall  f1-score   support
 
-<span class="ansired">NameError</span>: name &apos;confusion_matrix&apos; is not defined</pre>
+        0.0       0.89      0.97      0.93        86
+        1.0       0.80      0.55      0.65        22
+
+avg / total       0.87      0.88      0.87       108
+
+</pre>
 </div>
 </div>
 
@@ -676,7 +647,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
@@ -687,11 +658,7 @@ div#notebook {
 <span class="n">accuracy_forest</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_forest</span><span class="p">)</span>
 <span class="n">accuracy_forest</span>
 
-<span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">output_forest</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span><span class="n">conf_prefix</span><span class="o">=</span><span class="s">&quot;rf_&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Random Forest Confusion Matrix&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">bias_var</span><span class="p">(</span><span class="n">clf_forest</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;Random Forest &quot;</span><span class="p">,</span><span class="n">savestr</span><span class="o">=</span><span class="s">&quot;rf_&quot;</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">output_forest</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -704,16 +671,13 @@ div#notebook {
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>X_trainRMS:  18.2352941176
-X_trainRMS:  8.90909090909
-X_trainRMS:  5.54
-X_trainRMS:  3.95454545455
-X_trainRMS:  2.98780487805
-X_trainRMS:  2.30303030303
-X_trainRMS:  1.84347826087
-X_trainRMS:  1.49618320611
-X_trainRMS:  1.20945945946
-X_trainRMS:  0.993902439024
+<pre>             precision    recall  f1-score   support
+
+        0.0       0.79      0.99      0.88        86
+        1.0       0.00      0.00      0.00        22
+
+avg / total       0.63      0.79      0.70       108
+
 </pre>
 </div>
 </div>
@@ -733,7 +697,7 @@ X_trainRMS:  0.993902439024
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">clf_lr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">opening_movies</span><span class="p">)</span>
@@ -747,7 +711,7 @@ X_trainRMS:  0.993902439024
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[117]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[75]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -820,4 +784,8 @@ X_trainRMS:  0.993902439024
 </div>
     </div>
   </div>
+
+
+
+
 

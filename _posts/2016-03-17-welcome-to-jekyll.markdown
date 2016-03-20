@@ -3,25 +3,6 @@ layout: post
 title:  "Data Munging"
 categories: jekyll update
 ---
-<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/ -->
 <hr>
 {% highlight ruby %}
 Data was not organized in the manner that we needed to consume it.  We passed
@@ -31,7 +12,7 @@ a combination of logic written in python and java to clean and organize the
 results.  
 {% endhighlight %}
 The code for extraction is available here 
-[Data Munging](https://github.com/MachineLearningCSULA/DataMunging)
+[Data Munging](https://github.com/MachineLearningCSULA/DataMunging_V2)
 <h1>Our Data Sets</h1>
 <hr>
 <table>
