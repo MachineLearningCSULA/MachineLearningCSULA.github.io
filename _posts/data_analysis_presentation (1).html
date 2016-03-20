@@ -1,15 +1,11 @@
----
-layout: post
-title:  "Data Anaylsis"
-categories: jekyll update
----
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" />
+<title>data_analysis_presentation</title>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<style>
-.wrapper{
-    margin-left = 20px;
-}
-</style>
+
 <style type="text/css">
     /*!
 *
@@ -148,6 +144,28 @@ div#notebook {
 <link rel="stylesheet" href="custom.css">
 
 <!-- Loading mathjax macro -->
+<!-- Load mathjax -->
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    <!-- End of mathjax configuration --></head>
+<body>
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -784,8 +802,5 @@ avg / total       0.63      0.79      0.70       108
 </div>
     </div>
   </div>
-
-
-
-
-
+</body>
+</html>

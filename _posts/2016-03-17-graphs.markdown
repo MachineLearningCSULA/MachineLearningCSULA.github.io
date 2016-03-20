@@ -5,43 +5,42 @@ categories: jekyll update
 ---
 
 <a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
-  Bias and Variance
+  Confusion Matrix
 </a>
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Confusion Matrix
+  Bias and Variance
 </button>
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
-  Receiving Operating Charactertistic
+  Receiving Operating Characteristic
 </button>
 <div class="collapse" id="collapseExample">
   <div class="well">
   <h2>Naive Bayes</h2>
   <img src="/assets/nb_rms_vs_train.png" />
-  <caption>Blah Blah</caption>
+  <!-- <caption>Blah Blah</caption> -->
   <h2>Random Forest</h2>
   <img src="/assets/rf_rms_vs_train.png" />
+  <!-- add notes for TRAINING <p></p>-->
   </div>
 </div>
 <div class="collapse" id="collapseExample2">
   <div class="well">
-      <h2>Confusion Matrix: Naive Bayes</h2>
+      <h2>Confusion Matrix: Naive Bayes, Logistic Regression, Random Forest</h2>
       <img src="/assets/nb_confus_matrix.png" />
-      <h2>Confusion Matrix: Logistic Regression</h2>
+      <!-- <h2>Confusion Matrix: Logistic Regression</h2> -->
       <img src="/assets/lg_confus_matrix.png" />
-      <h2>Confusion Matrix: SVM</h2>
+      <!-- <h2>Confusion Matrix: SVM</h2> -->
       <img src="/assets/svm_confus_matrix.png" />
-      <h2>Confusion Matrix: Random Forest </h2>
+      <!-- <h2>Confusion Matrix: Random Forest </h2> -->
       <img src="/assets/rf_confus_matrix.png" />
+      <!-- add notes for Confusion graphs <p></p>-->
   </div>
 </div>
 <div class="collapse" id="collapseExample3">
   <div class="well">
-      <h2>Receiving Operator Char </h2>
-      <img src="/assets/roc_sample.png" />
-      <h2>Receiving Operator Char </h2>
+      <h2>Receiving Operating Characteristic</h2>
       <img src="/assets/roc_samplev2.png" />
-      <h2>Receiving Operator Char </h2>
-      <img src="/assets/roc_lg_sample.png" />
+      <!-- add notes for ROC graphs <p></p>-->
   </div>
 </div>
 <!-- <h2>Naive Bayes</h2>
