@@ -85,3 +85,6 @@ The code for extraction is available here
  positive.  This score was then averaged and scaled and added to 
  a column in our matrix of features. 
 {% endhighlight %}
+<img src="/assets/pos_neg.png" />
+<img src="/assets/straightouttacompton.jpg" />
+<img src="/assets/straightouttacomptonsentiment.png" />
