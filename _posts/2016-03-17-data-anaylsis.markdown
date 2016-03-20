@@ -4,7 +4,6 @@ title:  "Data Anaylsis"
 categories: jekyll update
 ---
 
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -147,14 +146,16 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <!-- MathJax configuration -->
+    
 
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[120]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
@@ -193,7 +194,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">array</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;released_month&#39;</span><span class="p">]</span>
@@ -241,7 +242,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">median</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;metascore&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notnull</span><span class="p">()][</span><span class="s">&#39;metascore&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
@@ -275,7 +276,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">df</span><span class="p">[</span><span class="s">&#39;profit_ratio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s">&#39;gross&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">df</span><span class="p">[</span><span class="s">&#39;budget&#39;</span><span class="p">]</span>
@@ -298,7 +299,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[105]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># define successful movie as earning net profit = three times its budget</span>
@@ -321,7 +322,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[105]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -347,80 +348,80 @@ div#notebook {
   <tbody>
     <tr>
       <th>0</th>
-      <td>11</td>
+      <td>11.0</td>
       <td>3</td>
       <td>7</td>
       <td>5</td>
       <td>262</td>
       <td>176</td>
       <td>63</td>
-      <td>46</td>
-      <td>41</td>
-      <td>209678</td>
+      <td>46.0</td>
+      <td>41.0</td>
+      <td>209678.0</td>
       <td>40000000</td>
       <td>4.154181</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>33</td>
+      <td>33.0</td>
       <td>9</td>
       <td>1</td>
       <td>4</td>
       <td>53</td>
       <td>160</td>
       <td>81</td>
-      <td>74</td>
-      <td>86</td>
-      <td>845024</td>
+      <td>74.0</td>
+      <td>86.0</td>
+      <td>845024.0</td>
       <td>165000000</td>
       <td>1.139515</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>8</td>
+      <td>8.0</td>
       <td>4</td>
       <td>0</td>
       <td>5</td>
       <td>193</td>
       <td>222</td>
       <td>54</td>
-      <td>51</td>
-      <td>54</td>
-      <td>35637</td>
+      <td>51.0</td>
+      <td>54.0</td>
+      <td>35637.0</td>
       <td>70000000</td>
       <td>0.101388</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
+      <td>0.0</td>
       <td>9</td>
       <td>3</td>
       <td>5</td>
       <td>149</td>
       <td>155</td>
       <td>89</td>
-      <td>67</td>
-      <td>66</td>
-      <td>7698</td>
+      <td>67.0</td>
+      <td>66.0</td>
+      <td>7698.0</td>
       <td>5000000</td>
       <td>0.625788</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>0</td>
+      <td>0.0</td>
       <td>1</td>
       <td>5</td>
       <td>5</td>
       <td>145</td>
       <td>243</td>
       <td>59</td>
-      <td>51</td>
-      <td>61</td>
-      <td>6968</td>
+      <td>51.0</td>
+      <td>61.0</td>
+      <td>6968.0</td>
       <td>1000000</td>
       <td>0.023400</td>
       <td>0</td>
@@ -456,7 +457,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># data</span>
@@ -482,7 +483,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[119]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -515,7 +516,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[113]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
@@ -537,20 +538,13 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>X_trainRMS:  18.2352941176
-X_trainRMS:  8.90909090909
-X_trainRMS:  5.54
-X_trainRMS:  3.95454545455
-X_trainRMS:  2.98780487805
-X_trainRMS:  2.30303030303
-X_trainRMS:  1.84347826087
-X_trainRMS:  1.49618320611
-X_trainRMS:  1.20945945946
-X_trainRMS:  0.993902439024
-</pre>
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.79629629629629628</pre>
 </div>
+
 </div>
 
 </div>
@@ -568,7 +562,7 @@ X_trainRMS:  0.993902439024
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[114]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
@@ -583,7 +577,6 @@ X_trainRMS:  0.993902439024
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span><span class="n">conf_prefix</span><span class="o">=</span><span class="s">&quot;svm_&quot;</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;SVM Confusion Matrix&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">bias_var</span><span class="p">(</span><span class="n">clf_svm</span><span class="p">,</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;SVM &quot;</span><span class="p">,</span><span class="n">savestr</span><span class="o">=</span><span class="s">&quot;svm_&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -595,18 +588,18 @@ X_trainRMS:  0.993902439024
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>X_trainRMS:  18.2352941176
-X_trainRMS:  8.90909090909
-X_trainRMS:  5.54
-X_trainRMS:  3.95454545455
-X_trainRMS:  2.98780487805
-X_trainRMS:  2.30303030303
-X_trainRMS:  1.84347826087
-X_trainRMS:  1.49618320611
-X_trainRMS:  1.20945945946
-X_trainRMS:  0.993902439024
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-17-56f3382f0cca&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">      7</span> accuracy_svm<span class="ansiyellow"></span>
+<span class="ansigreen">      8</span> <span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 9</span><span class="ansiyellow"> </span>cm <span class="ansiyellow">=</span> confusion_matrix<span class="ansiyellow">(</span>y_test<span class="ansiyellow">,</span> output_svm<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     10</span> plt<span class="ansiyellow">.</span>figure<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     11</span> plot_confusion_matrix<span class="ansiyellow">(</span>cm<span class="ansiyellow">,</span>conf_prefix<span class="ansiyellow">=</span><span class="ansiblue">&quot;svm_&quot;</span><span class="ansiyellow">,</span>title<span class="ansiyellow">=</span><span class="ansiblue">&quot;SVM Confusion Matrix&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+
+<span class="ansired">NameError</span>: name &apos;confusion_matrix&apos; is not defined</pre>
 </div>
 </div>
 
@@ -625,7 +618,7 @@ X_trainRMS:  0.993902439024
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
@@ -653,18 +646,18 @@ X_trainRMS:  0.993902439024
 
 
 <div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>X_trainRMS:  18.2352941176
-X_trainRMS:  8.90909090909
-X_trainRMS:  5.54
-X_trainRMS:  3.95454545455
-X_trainRMS:  2.98780487805
-X_trainRMS:  2.30303030303
-X_trainRMS:  1.84347826087
-X_trainRMS:  1.49618320611
-X_trainRMS:  1.20945945946
-X_trainRMS:  0.993902439024
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansired">---------------------------------------------------------------------------</span>
+<span class="ansired">NameError</span>                                 Traceback (most recent call last)
+<span class="ansigreen">&lt;ipython-input-18-ebf26e0cdd6b&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">      8</span> accuracy_lr<span class="ansiyellow"></span>
+<span class="ansigreen">      9</span> <span class="ansiyellow"></span>
+<span class="ansigreen">---&gt; 10</span><span class="ansiyellow"> </span>cm <span class="ansiyellow">=</span> confusion_matrix<span class="ansiyellow">(</span>y_test<span class="ansiyellow">,</span> output_lr<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     11</span> plt<span class="ansiyellow">.</span>figure<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">     12</span> plot_confusion_matrix<span class="ansiyellow">(</span>cm<span class="ansiyellow">,</span>conf_prefix<span class="ansiyellow">=</span><span class="ansiblue">&quot;lg_&quot;</span><span class="ansiyellow">,</span>title<span class="ansiyellow">=</span><span class="ansiblue">&quot;Logistic Regression Confusion Matrix&quot;</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+
+<span class="ansired">NameError</span>: name &apos;confusion_matrix&apos; is not defined</pre>
 </div>
 </div>
 
@@ -827,6 +820,4 @@ X_trainRMS:  0.993902439024
 </div>
     </div>
   </div>
-
-
 
