@@ -87,4 +87,4 @@ The code for extraction is available here
 {% endhighlight %}
 <img src="/assets/pos_neg.png"/>
 <img src="/assets/straightouttacompton.jpg" />
-<img src="/assets/straightouttacomptonsentiment.jpg" />
+<img src="/assets/sentimentchart.jpg" />
