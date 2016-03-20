@@ -67,7 +67,7 @@ The code for extraction is available here
 <h3>Example Data: Straight Outta Compton (2015)</h3>
 <hr>
 <img src="/assets/sentimentchart.jpg" />
-<br>
+<hr>
 {% highlight ruby %}
  The tweets were feed through a method in textblob that returned sentiment 
  analysis based on sophisticated implementation of Naive Bayes which returned 
@@ -79,7 +79,7 @@ The code for extraction is available here
 {% endhighlight %}
 <br><br>
 <img src="/assets/sentimentchart2.jpg" />
-<br>
+<hr>
 {% highlight ruby %}
  Since social media tweets are unstructured sentences that contain special 
  characters, mispelled words and slangs, thus sorting out meaningful sentences
@@ -88,7 +88,7 @@ The code for extraction is available here
 {% endhighlight %}
 <br><br>
 <img src="/assets/straight_result.jpg" />
-<br>
+<hr>
 {% highlight ruby %}
  The movie Straight Outta Compton receives average sentiment score of +30.
 {% endhighlight %}
