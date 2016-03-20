@@ -20,8 +20,10 @@ categories: jekyll update
   <!-- <caption>Learning Curve</caption> -->
   <h2>Random Forest</h2>
   <img src="/assets/rf_rms_vs_train.png" />
-  <!-- add notes for TRAINING <p>Training Curve: Artificially Restrict Training size, As training set grows, error grows.</p>
-  <p>Cross Validation: Stand in for test data, check to see if trained data is generalizable to test set.  So, with increased training set size, cross validation error should decrease.</p>-->
+  <p>Training Curve: Artificially Restrict Training size, As training set grows, error grows.</p>
+  <p>Cross Validation: Stand in for test data, check to see if trained data is generalizable to test set.  So, with increased training set size, cross validation error should decrease.</p>
+  <p>A large gap between the cross validation error curve and training error curve suggests high variance (Overfitting), cross validation error will remain high.  If the cross validation error curve and training error curve are very close to each other there is high bias (Underfitting).  Our study suggests that our model has some overfitting for the naive bayes classifier.</p>
+  <p>The learning curve suggests our model needs additional training data because of the high variance.</p>
   </div>
 </div>
 <div class="collapse" id="collapseExample2">
@@ -41,9 +43,9 @@ categories: jekyll update
   <div class="well">
       <h2>Receiving Operating Characteristic</h2>
       <img src="/assets/roc_samplev2.png" />
-      <p>ROC Curve, common way to visual performance of binary classifier, in our study successful or not successful movies.</p>
+      <p>ROC Curve: common way to visual performance of binary classifier, in our study the ROC curve shows the performance of the various classifiers we used for predicting successful or not successful movies.</p>
       <p>True Positive: When actual classification is positive how often does classifier predict positive?</p>
-      <p>False Positive: When classification actual classification is negative how often does classify incorrectly predict positive.</p>
+      <p>False Positive: When actual classification is negative how often does classify incorrectly predict positive.</p>
       <p>Movement along the ROC curve will give the True Positive vs False Positive rates of a given classification threshold for the classifier.</p>
       <p>Closer to diagonal line means closer to random guessing</p>
       <p>AUC: Area Under the Curve.  Higher AUC is better, 1 is a perfect classifier, 0.5 is random guessing.  For this study SVM was same as random guessing.</p>
@@ -75,6 +77,8 @@ categories: jekyll update
 <ul>
     <li>We can predict with about 70% accuracy the success of new film</li>
     <li>We need access to larger date sensitive data from Twitter to make this prediction more accurate</li>
-    <li>Something about graphs</li>
+    <li>ROC Curve shows that Naive Bayes and Logisitic Regression were the best classifiers while SVM was as bad as random guessing.</li>
+    <li>The confusion matrix shows that the model almost always predicts movies to be unsuccessful and has a high false negative rate.</li>
+    <li>The learning curve suggests our model requires additional training data because of the suggested high variance.</li>
 </ul>
    
