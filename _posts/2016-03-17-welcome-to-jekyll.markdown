@@ -69,22 +69,22 @@ The code for extraction is available here
 <img src="/assets/sentimentchart.jpg" />
 <br>
 {% highlight ruby %}
- The tweets were feed through a method in textblob that returned 
- sentiment analysis based on sophisticated implementation of Naive 
- Bayes which returned a score between -1 and 1. 
+ The tweets were feed through a method in textblob that returned sentiment 
+ analysis based on sophisticated implementation of Naive Bayes which returned 
+ a score between -1 and 1. 
  In order to give fair scoring, only unique tweets per each movie were counted, 
- and sentences with neutral sentiment (usually advertisement or links) were not counted towards 
- calculating an average. This score was then averaged and scaled and added to a column 
- in our matrix of features. 
+ and sentences with neutral sentiment (usually advertisement or links) were not 
+ counted towards calculating an average. This score was then averaged and scaled 
+ and added to a column in our matrix of features. 
 {% endhighlight %}
 <br><br>
 <img src="/assets/sentimentchart2.jpg" />
 <br>
 {% highlight ruby %}
- Since social media tweets are unstructured sentences that contain
- special characters, mispelled words and slangs, sorting out meaningful
- sentences were a challenge. Also textblob library failed to provide
- accurate analysis on sentences that contain both positive and negative words.
+ Since social media tweets are unstructured sentences that contain special 
+ characters, mispelled words and slangs, thus sorting out meaningful sentences
+ was a challenge. Also textblob library failed to provide accurate analysis on 
+ sentences that contain both positive and negative words.
 {% endhighlight %}
 <br><br>
 <img src="/assets/straight_result.jpg" />
