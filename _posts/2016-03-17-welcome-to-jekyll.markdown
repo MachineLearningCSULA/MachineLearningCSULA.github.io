@@ -88,7 +88,7 @@ The code for extraction is available here
 <h2>Positive vs Negative Sentiment</h2>
 <img src="/assets/pos_neg.png"/>
 <br>
-<h2>Example Data: Straight Outta Compton (2015</h2>
+<h2>Example Data: Straight Outta Compton (2015)</h2>
 <img src="/assets/straightouttacompton.jpg" />
-<br>
+<br><br>
 <img src="/assets/sentimentchart.jpg" />
